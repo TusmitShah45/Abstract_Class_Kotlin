@@ -1,0 +1,39 @@
+fun main() {
+    println("Hello World")
+    var r=Rectangle()
+    r.calculateArea()
+    var s = Square()
+    s.calculateArea()
+    var c = Circle()
+    c.calculateArea()
+    
+}
+abstract class Shape
+{
+    var sideCount:Int=0
+    abstract fun calculateArea()
+}
+
+class Rectangle:Shape(){
+    override fun calculateArea(){
+        var length :Double = 4.0
+        var width : Double = 5.0
+        var areaR:Double=length*width
+        println("Calculated Area is $areaR")
+    }
+}
+class Square:Shape(){
+    override fun calculateArea(){
+        var side:Double = 5.0
+        var areaS:Double=side*side
+        println("Calculated Area is $areaS")
+    }
+}
+class Circle:Shape(){
+    override fun calculateArea(){
+        var radius :Double=5.0
+        val PI:Double=3.14
+        var areaC:Double=PI*radius*radius
+        println("Calculated Area is $areaC")
+    }
+}
